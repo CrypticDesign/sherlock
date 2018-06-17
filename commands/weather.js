@@ -3,10 +3,10 @@ const weather = require("weather-js");
 const botconfig = require("../botconfig.json");
 
 module.exports.run = async(bot, message, args) => {
-  weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result){
+  weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result){
     if(err) console.log(err);
 
-    if(!args[0] || args[0 == "help"]) return message.channel.send(`Usage: m.weather <location>`);
+    if(!args[0] || args[0 == "help"]) return message.channel.send(`Usage: ps!weather <location>`);
 
 
 
